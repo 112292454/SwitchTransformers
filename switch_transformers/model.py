@@ -52,7 +52,7 @@ class SwitchGate(nn.Module):
 
         # Mask to enforce sparsity
         mask = torch.zeros_like(gate_scores).scatter_(
-            1, top_k_indices, 1
+            2, top_k_indices, 1
         )
 
         # Combine gating scores with the mask
